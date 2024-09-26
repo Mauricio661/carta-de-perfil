@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TARJETA DE PERFIL</title>
+        <link rel="stylesheet" href="Perfil.css">
+        <head>
+
+            <body>
+
+                <!--Barra de navegacion-->
+                <nav class="navbar">
+                    <div class="menu-hamburger">
+                        <ul id="menu" class="menu-list">
+                            <li><a href="#inicio"
+                                    onclick="mostrarSeccion('inicio')">Acerca de
+                                    mi</a></li>
+                            <li><a href="#royectos"
+                                    onclick="mostrarSeccion('proyectos')">Proyectos</a></li>
+                            <li><a href="#contacto"
+                                    onclick="mostrarSeccion('contacto')">Contactame</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div id="main-content">
+
+                    <div id="inicio" class="section">
+                        <div class="inicio-contenido">
+                            <div class="profile-card">
+                                <img src="img/p5.png" alt="Foto de perfil"
+                                    class="profile-image">
+                                <h2 class="profile-name">Mauricio Chavez</h2>
+                                <p class="profile-description">He kills gods</p>
+                            </div>
+                            <div class="description">
+                                <p>
+                                    Soy un desarrollador muy profesional que es
+                                    capaz de crear
+                                    lo increable.
+                                </p>
+                                <div class="iconos-redes">
+                                    <a href="https://github.com/"><img src="img/git.png" alt="Github"
+                                            class="icon"></a>
+                                    <a href="https://pe.linkedin.com/"><img src="img/lin.png" alt="LinkedIn"
+                                            class="icon"></a>
+                                    <a href="https://x.com/?lang=es"><img src="img/x.png" alt="X"
+                                            class="icon"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="proyectos" class="section" style="display: none;">
+                        <h2>Mis proyectos</h2>
+                        <div class="proyectos-grid">
+                            <div class="proyecto">
+                                <h3>Proyecto 1</h3>
+                                <p>Descripcion de proyecto 1</p>
+                            </div>
+                            <div class="proyecto">
+                                <h3>Proyecto 2</h3>
+                                <p>Descripcion de proyecto 2</p>
+                            </div>
+                            <div class="proyecto">
+                                <h3>Proyecto 3</h3>
+                                <p>Descripcion de proyecto 3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contacto" class="section" style="display: none;">
+                        <h2>Contactame</h2>
+                        <form>
+                            <label for="nombre">Nombre: </label>
+                            <input type="text" id="nombre" required>
+
+                            <label for="email">Email: </label>
+                            <input type="email" id="email" name="email"
+                                required>
+
+                            <label for="mensaje">Dejame un mensaje</label>
+                            <textarea id="mensaje" name="mensaje"
+                                required></textarea>
+
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <script>
+                    function mostrarSeccion(seccion){
+                        const secciones = document.querySelectorAll('.section')
+                        secciones.forEach(function(sec){
+                            sec.style.display = 'none';
+                        });
+                        document.getElementById(seccion).style.display ='block';
+                    }
+                </script>
+
+            </body>
+
+        </html>
